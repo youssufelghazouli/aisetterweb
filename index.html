@@ -34,14 +34,16 @@
   <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .container{max-width:1100px}
+    .container{max-width:1200px}
     .badge{background:linear-gradient(90deg,#c7d2fe,#a7f3d0); color:#111827}
-    .glass{backdrop-filter: blur(10px); background:rgba(255,255,255,0.65)}
     .chat-dark{background:radial-gradient(1200px 500px at 20% -10%,#1f2937 0%,#0f1115 40%,#0b0d12 100%)}
     .bubble-left{background:#20232b}
     .bubble-right{background:#4f46e5}
     .label-ai{color:#818cf8;font-weight:600}
     .label-lead{color:#34d399;font-weight:600}
+    .chip{border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.06)}
+    .who-gradient{background:linear-gradient(135deg,#0b0d12 0%,#111827 45%,#1f2937 100%)}
+    .who-accent{background:linear-gradient(90deg,#4f46e5,#06b6d4)}
   </style>
 </head>
 <body class="text-slate-800 bg-slate-50">
@@ -64,29 +66,8 @@
     </div>
   </header>
 
-  <!-- WHO IT'S FOR – top highlight section -->
-  <section class="border-b bg-gradient-to-r from-indigo-50 to-emerald-50/80">
-    <div class="container mx-auto px-5 py-6">
-      <div class="rounded-2xl bg-white shadow-sm border p-5">
-        <h2 class="text-sm font-semibold text-slate-700">AI agent for online & local businesses communicating over Instagram or Email (any messaging service)</h2>
-        <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-[12px]">
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Venue booking</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Catering & Restaurants</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Car detailing & Window washing</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Interior design & Local services</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Therapists & Trainers</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">SaaS & Agencies</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Fitness / Mindset / Business coaching</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Growth operators & SMMs</div>
-          <div class="px-3 py-2 rounded-full border bg-slate-50">Course sellers & Educational</div>
-        </div>
-        <p class="mt-3 text-xs text-slate-600">Not limited to the above — if your customers message you on IG or Email, the agent plugs in.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Hero -->
-  <section class="container mx-auto px-5 pt-10 pb-10">
+  <section class="container mx-auto px-5 pt-12 pb-10">
     <div class="flex flex-col md:flex-row items-center gap-10">
       <div class="flex-1">
         <span class="badge inline-block px-3 py-1 rounded-full text-xs font-semibold">For online businesses • Meta friendly</span>
@@ -119,22 +100,51 @@
     </div>
   </section>
 
-  <!-- How it works -->
-  <section id="how" class="bg-white py-14 border-y">
+  <!-- WHO IT'S FOR – dark, colorful, right under hero -->
+  <section class="who-gradient border-y">
+    <div class="container mx-auto px-5 py-8 text-slate-200">
+      <div class="flex items-center gap-2">
+        <span class="who-accent text-[11px] px-2 py-1 rounded-full text-white">Who it’s for</span>
+        <span class="text-xs text-slate-400">AI agent for Instagram & Email (any messaging service)</span>
+      </div>
+      <p class="mt-3 text-sm md:text-base text-slate-300">
+        Online & local businesses dealing with customers, leads, or clients: venue booking, catering, restaurants, car detailing, window washing, interior design,
+        therapists, trainers, SaaS, fitness/mindset/business coaching, growth operators, social media managers, course sellers, educational, and more.
+      </p>
+      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-2 text-[12px]">
+        <div class="chip px-3 py-2 rounded-full">Venue booking</div>
+        <div class="chip px-3 py-2 rounded-full">Catering & Restaurants</div>
+        <div class="chip px-3 py-2 rounded-full">Car detailing</div>
+        <div class="chip px-3 py-2 rounded-full">Window washing</div>
+        <div class="chip px-3 py-2 rounded-full">Interior design</div>
+        <div class="chip px-3 py-2 rounded-full">Therapists & Trainers</div>
+        <div class="chip px-3 py-2 rounded-full">SaaS & Agencies</div>
+        <div class="chip px-3 py-2 rounded-full">Coaching (fitness/mindset/business)</div>
+        <div class="chip px-3 py-2 rounded-full">Growth operators & SMMs</div>
+        <div class="chip px-3 py-2 rounded-full">Course sellers</div>
+        <div class="chip px-3 py-2 rounded-full">Educational</div>
+        <div class="chip px-3 py-2 rounded-full">More…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works (simplified & bold 2 minutes) -->
+  <section id="how" class="bg-white py-14">
     <div class="container mx-auto px-5">
       <h2 class="text-2xl font-semibold">How it works</h2>
       <div class="grid md:grid-cols-3 gap-6 mt-6">
         <div class="p-6 bg-slate-50 rounded-2xl border">
-          <h3 class="font-semibold">1) Connect Instagram or Email</h3>
-          <p class="mt-2 text-slate-600">Use Meta OAuth for IG or connect your email. We store a Page ID and token (or email OAuth) to reply where you approve.</p>
+          <h3 class="font-semibold">1) Connect your account</h3>
+          <p class="mt-2 text-slate-600">Meta OAuth (Instagram) or Gmail for email.</p>
+          <p class="mt-1"><span class="text-indigo-700 font-semibold">Takes ~2 minutes.</span></p>
         </div>
         <div class="p-6 bg-slate-50 rounded-2xl border">
-          <h3 class="font-semibold">2) Set rules</h3>
-          <p class="mt-2 text-slate-600">Choose who the AI can reply to, set guardrails, and enable human takeover. You can pause the AI anytime from your dashboard.</p>
+          <h3 class="font-semibold">2) Set simple rules</h3>
+          <p class="mt-2 text-slate-600">Choose who the AI can reply to, add guardrails, enable human takeover. Pause anytime from your dashboard.</p>
         </div>
         <div class="p-6 bg-slate-50 rounded-2xl border">
-          <h3 class="font-semibold">3) Qualify and book</h3>
-          <p class="mt-2 text-slate-600">We collect details, answer questions, and share a booking link or order confirmation. Opt in to notifications for qualified leads, booked calls/services, or disqualified leads.</p>
+          <h3 class="font-semibold">3) Let the AI work</h3>
+          <p class="mt-2 text-slate-600">It qualifies leads, books calls or service appointments, answers FAQs, and can share quotes or order confirmations. Opt in to notifications for qualified, booked, or disqualified leads.</p>
         </div>
       </div>
     </div>
@@ -146,7 +156,7 @@
     <p class="mt-2 text-slate-600">Two core modes: a messenger that acts like a staff member for service or local businesses, and an appointment setter for online brands and coaches.</p>
 
     <div class="grid md:grid-cols-2 gap-6 mt-6">
-      <!-- Service / Local -->
+      <!-- Service / Local (dark card) -->
       <article class="p-6 rounded-2xl border shadow-sm bg-[#0f1115] border-slate-800 text-slate-200">
         <div class="flex items-center gap-2">
           <span class="px-2 py-1 text-[11px] rounded-full bg-slate-800 text-slate-200">Service and Local</span>
@@ -167,7 +177,7 @@
         </div>
       </article>
 
-      <!-- Online brands and coaches -->
+      <!-- Online brands and coaches (light card) -->
       <article class="p-6 bg-white rounded-2xl border shadow-sm">
         <div class="flex items-center gap-2">
           <span class="px-2 py-1 text-[11px] rounded-full badge">Online Brands and Coaches</span>
@@ -190,30 +200,69 @@
     </div>
   </section>
 
-  <!-- Examples (unchanged content kept) -->
+  <!-- Examples (RESTORED FULL SECTION) -->
   <section id="examples" class="py-16 bg-[#0b0d12] text-slate-200 border-y border-slate-800">
     <div class="container mx-auto px-5">
       <div class="flex items-center justify-between flex-wrap gap-4">
         <h2 class="text-2xl font-semibold">Examples</h2>
         <div class="text-sm text-slate-400">human voice • empathy first • clear next steps</div>
       </div>
-      <style>.pill-green{background:#10b981;color:white}.pill-purple{background:#6366f1;color:white}</style>
+
+      <style>
+        .pill-green{background:#10b981;color:white}
+        .pill-purple{background:#6366f1;color:white}
+      </style>
+
       <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <!-- service booking demo -->
+        <!-- Service booking example -->
         <article class="rounded-2xl border border-slate-800 bg-[#0f1115] p-5">
-          <!-- ... keep your original example bubbles here ... -->
-          <div class="text-[12px] text-slate-400 border-t border-slate-800 pt-3 mt-4">
+          <div class="flex items-center gap-2 text-xs mb-3">
+            <span class="px-2 py-1 rounded-full pill-green">Service booking</span>
+            <span class="text-slate-400">front desk style</span>
+          </div>
+          <div class="space-y-2 text-[13px] leading-5 font-mono">
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: hi. do you do catering for 25?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: we do. happy to help. is it pickup or delivery, and what date and time are you thinking?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: delivery, friday 6 pm</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: nice. sounds like a big night. what are you looking to get? trays, mains, sides, or drinks</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: two chicken trays, one veggie tray, rice and salad, and water</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: noted. any dietary restrictions we should respect?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: two vegetarians and one gluten free</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: thanks for sharing that. for that order the subtotal is about 660. delivery is 10. tax is 80.40. estimated total is 750.40. does that sound good to you?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: yes sounds good</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: great. what is the name, phone, email, and drop off address?</div></div>
+          </div>
+          <div class="mt-4 text-[12px] text-slate-400 border-t border-slate-800 pt-3">
             Next the assistant sends a friendly confirmation and invoice, shares the delivery window, and records the order in your log. You can pause or make changes at any time.
           </div>
         </article>
-        <!-- appointment setter demo -->
+
+        <!-- Appointment Setter example -->
         <article class="rounded-2xl border border-slate-800 bg-[#0f1115] p-5">
-          <!-- ... keep your original example bubbles here ... -->
-          <div class="text-[12px] text-slate-400 border-t border-slate-800 pt-3 mt-4">
+          <div class="flex items-center gap-2 text-xs mb-3">
+            <span class="px-2 py-1 rounded-full pill-purple">Appointment Setter</span>
+            <span class="text-slate-400">qualifies and books</span>
+          </div>
+          <div class="space-y-2 text-[13px] leading-5 font-mono">
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: hey, I was wondering what your service looks like?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: for sure. before we get into plans, what is your story with fitness? maybe past sports, how you have felt in your body, or your relationship with food?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: I have been working out consistently but I see no results</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: I hear you. that can feel draining when you are putting in the work and the scale does not move. how long has that felt stuck?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: idk maybe 2 years</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: thanks for being honest. what do you think has been holding you back most?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: I think I have been bad at tracking my food</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: that makes sense and you are not alone. tracking can help a lot. have you tried a food app like MyFitnessPal before?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: not really</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: no problem. if I show you a five minute setup and a simple three question check in each day, would you try it for a week?</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-lead">lead</span>: yeah I can</div></div>
+            <div class="flex justify-start"><div class="bubble-left rounded-2xl px-3 py-2"><span class="label-ai">ai</span>: awesome. quick consent check. can I ask a couple rapid questions to see if we are a fit, then I will send times?</div></div>
+          </div>
+          <div class="mt-4 text-[12px] text-slate-400 border-t border-slate-800 pt-3">
             Next the assistant gathers goals and basics, offers two time options, books the call, and saves the transcript to your log for review.
           </div>
         </article>
       </div>
+
     </div>
   </section>
 
