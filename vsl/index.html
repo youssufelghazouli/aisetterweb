@@ -67,7 +67,7 @@
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             border-radius: 8px;
             background: #000;
         }
@@ -154,8 +154,8 @@
 
         <!-- VIDEO PLAYER -->
         <div class="video-wrapper">
-            <video controls>
-                <source src="VSL.mp4" type="video/mp4">
+            <video controls preload="metadata" allowfullscreen>
+                <source src="./VSL.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
