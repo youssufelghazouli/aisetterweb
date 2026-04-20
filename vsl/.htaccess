@@ -1,0 +1,5 @@
+AddType video/mp4 .mp4
+AddType audio/mp4 .m4a
+<Files "*.mp4">
+  Header set Access-Control-Allow-Origin "*"
+</Files>
